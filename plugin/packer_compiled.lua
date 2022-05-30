@@ -69,19 +69,59 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["coc.nvim"] = {
+    config = { "require('pluginconf.coc')" },
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/martinsione/darkplus.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-treesitter"] = {
+    config = { "require('pluginconf.treesitter')" },
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('pluginconf.treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: coc.nvim
+time([[Config for coc.nvim]], true)
+require('pluginconf.coc')
+time([[Config for coc.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

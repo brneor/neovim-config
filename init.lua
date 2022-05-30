@@ -8,7 +8,7 @@ local globalOpts = {
 	ignorecase = true,
 	inccommand = "split",
 	incsearch = true,
-	laststatus = 2,
+	laststatus = 3,
 	cmdheight = 1,
 	mouse = "",
 	scrolloff = 2,
@@ -20,7 +20,7 @@ local globalOpts = {
 	writebackup = false,
 	completeopt = "menu,menuone,noselect",
 	title = true,
-
+	linespace = 20,
 	tabstop = 2,
 	shiftwidth = 2,
 }
@@ -31,7 +31,7 @@ local bufferOpts = {
 }
 
 local windowOpts = {
-	signcolumn = "number",
+	signcolumn = "auto",
 	number = true,
 	relativenumber = true,
 }
@@ -51,3 +51,9 @@ end
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 
 vim.cmd("colorscheme darkplus")
+
+require('nvim-treesitter').setup()
+
+require('gitsigns').setup() 
+
+require('neogit').setup()
