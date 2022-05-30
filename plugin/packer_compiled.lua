@@ -110,18 +110,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/brenoperes/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('pluginconf.treesitter')
-time([[Config for nvim-treesitter]], false)
 -- Config for: coc.nvim
 time([[Config for coc.nvim]], true)
 require('pluginconf.coc')
 time([[Config for coc.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('pluginconf.treesitter')
+time([[Config for nvim-treesitter]], false)
 if should_profile then save_profiles() end
 
 end)
